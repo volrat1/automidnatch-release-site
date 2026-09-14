@@ -1,0 +1,6 @@
+00  F-4  08  ..  ..
+04  ---  --  ..  ..
+08  G#4  08  ..  ..
+0C  C-5  08  ..  ..
+
+# replace with the original pre-APS cell for track 04

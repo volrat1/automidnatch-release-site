@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400">
+  <rect width="1400" height="1400" fill="#0d0f10"/>
+  <rect x="60" y="60" width="1280" height="1280" fill="none" stroke="#343a36" stroke-width="3"/>
+  <text x="100" y="160" fill="#a7ff74" font-family="monospace" font-size="36">AUTOMIDNATCH / RELEASE_001</text>
+  <text x="100" y="700" fill="#d5d7d4" font-family="monospace" font-size="62">DROP COVER ART HERE</text>
+  <text x="100" y="770" fill="#7f8882" font-family="monospace" font-size="28">assets/images/cover-placeholder.svg</text>
+  <text x="100" y="1220" fill="#343a36" font-family="monospace" font-size="24">XRNS / DIY / STATIC OUTPUT</text>
+</svg>
