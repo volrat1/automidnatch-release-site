@@ -1,115 +1,105 @@
-# Automidnatch Release Site
+# Automidnatch Production Systems
 
-Minimal static release site for GitHub Pages.
+**Release 001 — Experimental Renoise production workflow**
 
-## Replace these files
+This repository contains a musical release developed with **Automidnatch Production Systems (APS)**, an experimental workflow for developing human-authored musical material through structured interaction with Renoise project data.
 
-### 1. Cover
+The repository also hosts the release website and a compact production log documenting the experiment.
 
-Replace:
+## About the project
 
-```text
-assets/images/cover-placeholder.svg
-```
+Renoise provides an unusual environment for exploring human–AI music production. Its tracker-based workflow, structured XRNS project format, and Lua scripting layer make significant parts of a musical project accessible as explicit, inspectable data.
 
-with your real cover.
+APS explores this space as a production system rather than a music generator.
 
-Recommended:
+The starting point for each track is human-authored musical material created in Renoise. APS is then used as part of an iterative process of composition, variation, arrangement, sound design, routing, and production, while the musician retains selection, evaluation, editing, and final creative control.
 
-```text
-assets/images/cover.webp
-```
+## Objectives
 
-Then change the image path in `index.html`.
+The first APS experiment focuses on a small set of practical questions:
 
-### 2. Final tracks
+* Can short musical cells be developed into complete tracks through structured interaction with Renoise project data?
+* Can AI-assisted production remain transparent and editable rather than operating as an opaque audio-generation process?
+* Can the workflow preserve the musician's authorship and decision-making while reducing the mechanical cost of developing and testing ideas?
+* Can Renoise's existing architecture provide a useful foundation for deeper human–AI production workflows?
 
-Put the four MP3 files here:
+## Process
 
-```text
-assets/audio/final/
-```
+Four musical snippets created independently in Renoise were used as the starting material for four complete tracks.
 
-Default filenames expected by the site:
+The workflow can be summarized as:
 
 ```text
-01-track-one.mp3
-02-track-two.mp3
-03-track-three.mp3
-04-track-four.mp3
+HUMAN-AUTHORED MUSICAL CELL
+            │
+            ▼
+       RENOISE / XRNS
+            │
+            ▼
+   STRUCTURED APS INTERACTION
+            │
+            ▼
+ COMPOSITION / ARRANGEMENT
+ VARIATION / SOUND / ROUTING
+            │
+            ▼
+      HUMAN EVALUATION
+       AND ITERATION
+            │
+            ▼
+       FINISHED TRACK
 ```
 
-You can rename them, but update the `<source src="...">` entries in both `index.html` and `about.html`.
+The accompanying project log presents the original pre-APS material alongside the resulting tracks. It is intended as a concise record of the experiment rather than an exhaustive reconstruction of every production decision.
 
-### 3. Pre-APS audio
+## Release
 
-Put short exports of the four original snippets here:
+The four finished tracks constitute the primary output of the project.
+
+The release website deliberately presents them first as music. The technical context remains secondary and can be accessed through the **About this project** section.
+
+The site is built as plain static HTML, CSS, and JavaScript and is hosted through GitHub Pages.
+
+## Conclusions
+
+This first experiment suggests a model of AI-assisted music production in which the AI operates on **inspectable musical structures** rather than replacing the production process with generated audio.
+
+In this model, Renoise remains the actual production environment and the musician remains responsible for the musical source material, aesthetic direction, evaluation, intervention, and final result.
+
+APS acts as an intermediate system for navigating and transforming the increasingly complex space between an initial idea and a finished production.
+
+## Potential directions
+
+The experiment also suggests several possible lines of development relevant to Renoise:
+
+* XRNS-aware project analysis and transformation.
+* Lua tools for controlled variation, modulation, effects, and arrangement.
+* Readable diffs between successive Renoise project states.
+* More efficient exchange between Renoise and language models.
+* Reusable production operations that remain inspectable and reversible.
+* Tools for combining textual project manipulation with musician-led listening and selection.
+* A broader workflow for human–AI collaboration specifically designed around tracker-based production.
+
+## Repository
 
 ```text
-assets/audio/pre-aps/
+.
+├── index.html              # release
+├── about.html              # project log
+└── assets/
+    ├── audio/
+    │   ├── final/          # finished tracks
+    │   └── pre-aps/        # original musical material
+    ├── images/
+    ├── snippets/           # representations of starting material
+    ├── css/
+    └── js/
 ```
 
-Expected filenames:
+No framework, build system, backend, or external runtime is required.
 
-```text
-01-pre-aps.mp3
-02-pre-aps.mp3
-03-pre-aps.mp3
-04-pre-aps.mp3
-```
+---
 
-These do not need to be full tracks. Short loops / cells are enough.
+**AUTOMIDNATCH / APS / RELEASE_001**
 
-### 4. Renoise snippets
-
-Edit:
-
-```text
-assets/snippets/01.txt
-assets/snippets/02.txt
-assets/snippets/03.txt
-assets/snippets/04.txt
-```
-
-Paste a readable tracker representation, pattern text, XML excerpt or other compact source material.
-
-### 5. Titles and text
-
-Search and replace in `index.html`:
-
-```text
-RELEASE TITLE
-TRACK ONE
-TRACK TWO
-TRACK THREE
-TRACK FOUR
-```
-
-Then edit the prose in `about.html`.
-
-## Test locally
-
-From this folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Open:
-
-```text
-http://localhost:8000
-```
-
-Do not open `about.html` directly as `file://` if you want the snippet loader to work; serve it through a local HTTP server.
-
-## Publish on GitHub Pages
-
-1. Create a GitHub repository.
-2. Copy this folder into it.
-3. Commit and push.
-4. In GitHub: Settings → Pages.
-5. Choose `Deploy from a branch`.
-6. Select your main branch and `/ (root)`.
-
-The site is plain HTML/CSS/JS: no build system, dependencies or framework.
+Built with Renoise, structured project data, and iterative human–AI collaboration.
